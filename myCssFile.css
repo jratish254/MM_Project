@@ -1,0 +1,11 @@
+.myDiv{
+    background: rosybrown;
+    width: 140px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#parentDiv{
+    display: flex;
+    justify-content: center;
+}

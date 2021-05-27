@@ -1,0 +1,158 @@
+<html>
+<head>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+  <!-- <script src="stringMethodPractise.js"></script> -->
+  <link rel="stylesheet" href="myCssFile.css">
+</head>
+<body>  
+<div id="parentDiv">
+</div>
+
+
+<script src="stringMethodPractise.js"></script>
+
+ <script>
+
+   let userDetails=[
+    {
+        name:'amresh',
+        age:30,
+        address:'saharsa'
+    },
+    {
+        name:'Roshan',
+        age:37,
+        address:'Kahara'
+    },
+    {
+        name:'Sohan',
+        age:20,
+        address:'Supaul'
+    },
+    {
+        name:'Kumar',
+        age:20,
+        address:'Supaul'
+    },
+    {
+        name:'Jha',
+        age:20,
+        address:'Supaul'
+    }
+    
+]
+console.log("-----------",userDetails);
+
+ function myDeletefun(){
+     event.preventDefault();
+    userDetails.splice(1,1);
+    this.userDetails=userDetails;
+    console.log("-----------",userDetails);
+
+ }
+
+
+
+
+let tempData='';
+
+for(let i=0;i<=userDetails.length-1;i++){
+    tempData=tempData+`<tr><td>`+userDetails[i].name+`</td><td>`+userDetails[i].age+`</td><td>`+userDetails[i].address+`</td><td><a onclick="myDeletefun()" href="">`+'Delete'+`</a></td></tr>`;
+}
+
+
+
+
+
+document.getElementById('parentDiv').innerHTML=`<table>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Address</th>
+<th>Action</th>
+</tr>`+
+tempData
++
+
+`</table>`
+
+
+
+ </script> 
+</body>
+</html>
+
+
+<!-- 
+    JSON(Javac Sript Object Notation)
+
+
+   let abc= [
+   {
+       'name':'Amresh',
+       'age':30,
+       'address':{
+           'H_No':101,
+           'dist':'saharsa',
+           'PS':'Bihar',
+           'vill':'Purikh'
+       }
+   },
+    {
+       'name':'Chandra',
+       'age':31
+   }
+    ]
+
+    abc[0].name
+    abc[0].age
+    abc[0].address.dist
+    abc[0].address.H_No
+    abc[0].address.PS
+
+let abc=userdetails.stringfy()
+
+    xml formal----ui spport------jsnon format----string
+    api call
+ -->
+
+ <!-- 
+     xhttp.onreadystatechange=function(){
+         if(this.readyState==4 && this.status==200){
+            document.getElementById('myID').innerHTML=this.response;
+         }
+     }
+  -->
+
+  <!-- 
+  let abc={
+      name:'pen',
+      price:200,
+      Quality:{
+          color:'black',
+          weight:10gm,
+          smoothness:'better'
+      }
+  }
+
+  nested object-- object inside object
+
+   -->
+
+   <!-- 
+       XMLHttpRequest
+       1. It is a javascript object .
+       2.Which is responsible for fetching/sending data from server
+       3.for calling API to get data from dataBase
+    -->
+
+    <!-- 
+        asynchronous
+
+        ynchronous
+     -->
